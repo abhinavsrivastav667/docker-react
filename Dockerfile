@@ -12,4 +12,5 @@ COPY . .
 #Now we will write configuration for our second phase that is RUN PHASE
 
 FROM nginx
+EXPOSE 80  # this will expose the port 80 
 COPY --from=builder /app/build /usr/share/nginx/html
